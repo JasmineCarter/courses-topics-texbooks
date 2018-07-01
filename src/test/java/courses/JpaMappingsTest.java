@@ -25,7 +25,7 @@ public class JpaMappingsTest {
 	private TestEntityManager entityManager;
 
 	@Resource
-	private TopicRepoistory topicRepo;
+	private TopicRepository topicRepo;
 
 	@Resource
 	private CourseRepository courseRepo;
