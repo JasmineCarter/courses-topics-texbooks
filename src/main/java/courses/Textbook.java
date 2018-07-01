@@ -1,11 +1,9 @@
-package course;
+package courses;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-
-import courses.Course;
 
 @Entity
 public class Textbook {

@@ -10,8 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
-import course.Textbook;
-
 @Entity
 public class Course {
 	
@@ -22,10 +20,10 @@ public class Course {
 	private String name; 
 	private String description; 
 	
-	@ManyToMany(mappedBy = "course")
+	@ManyToMany
 	private Collection<Topic> topics; 
 	
-	@OneToMany
+	@OneToMany(mappedBy = "course")
 	private Collection<Textbook> textbooks; 
 	
 

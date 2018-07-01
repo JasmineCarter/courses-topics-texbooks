@@ -16,8 +16,6 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import course.Textbook;
-
 @RunWith(SpringJUnit4ClassRunner.class)
 @DataJpaTest
 
@@ -44,7 +42,7 @@ public class JpaMappingsTest {
 		entityManager.clear();
 
 		Optional<Topic> result = topicRepo.findById(topicId);
-		result.get();
+		topic = result.get();
 		assertThat(topic.getName(), is("topic"));
 	}
 
@@ -70,7 +68,7 @@ public class JpaMappingsTest {
 		entityManager.clear();
 
 		Optional<Course> result = courseRepo.findById(courseId);
-		result.get();
+		course = result.get();
 	}
 
 	@Test
